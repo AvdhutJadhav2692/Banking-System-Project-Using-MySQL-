@@ -48,15 +48,15 @@ Insert sample deposit and withdrawal records into the Transactions table.
 Users or bank staff add new transactions.
 Each transaction is linked to a valid account using a foreign key.
 
-4} Information Retrieval
+6.4} Information Retrieval
 Execute SQL queries to view account details and transaction history.
 Use views to display summarized account information such as balance and totals.
 
-5️} Analysis and Reporting
+6.5️} Analysis and Reporting
 Run aggregate queries to calculate totals, averages, and summaries.
 Use JOIN queries to combine account and transaction data for reports.
 
-6️} Maintenance and Updates
+6.6️} Maintenance and Updates
 Add new accounts or transactions when required.
 Update account details if needed.
 Perform regular database backups to prevent data loss.
