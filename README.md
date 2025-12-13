@@ -71,3 +71,13 @@ Use JOIN queries to combine account and transaction data for reports.
 Add new accounts or transactions when required.
 Update account details if needed.
 Perform regular database backups to prevent data loss.
+
+## STEP 1: Create and Use Database
+```sql
+Create Database Bank;
+use Bank;
+
+## STEP 1: Create and Use Database
+```sql
+
+
