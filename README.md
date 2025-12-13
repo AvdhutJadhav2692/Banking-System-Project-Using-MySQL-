@@ -86,7 +86,16 @@ CREATE TABLE accounts (account_num INT PRIMARY KEY, cust_name VARCHAR(50), gende
 ## STEP 3: Insert Values in Accounts Table
 ```sql
 INSERT INTO accounts (account_num, cust_name, gender, account_type, current_balance) VALUES
-(1001, 'Priya Patel', 'F', 'Savings', 75000.00),(1002, 'Amit Sharma', 'M', 'Current', 30000.00),(1003, 'Rohan Deshpande', 'M', 'Savings', 12000.00),(1004, 'Sneha Joshi', 'F', 'Savings', 52000.00),(1005, 'Vikas Singh', 'M', 'Current', 85000.00),(1006, 'Pooja Shetty', 'F', 'Savings', 60000.00),(1007, 'Nitin Verma', 'M', 'Current', 15000.00),(1008, 'Ananya Rao', 'F', 'Savings', 40000.00),(1009, 'Amit Sharma', 'M', 'Savings', 20000.00), (1010, 'Kavita Shah', 'F', 'Current', 90000.00);
+(1001, 'Priya Patel', 'F', 'Savings', 75000.00),
+(1002, 'Amit Sharma', 'M', 'Current', 30000.00),
+(1003, 'Rohan Deshpande', 'M', 'Savings', 12000.00),
+(1004, 'Sneha Joshi', 'F', 'Savings', 52000.00),
+(1005, 'Vikas Singh', 'M', 'Current', 85000.00),
+(1006, 'Pooja Shetty', 'F', 'Savings', 60000.00),
+(1007, 'Nitin Verma', 'M', 'Current', 15000.00),
+(1008, 'Ananya Rao', 'F', 'Savings', 40000.00),
+(1009, 'Amit Sharma', 'M', 'Savings', 20000.00),
+ (1010, 'Kavita Shah', 'F', 'Current', 90000.00);
 ```
 
 ## STEP 4: Create Table Transactions
@@ -97,7 +106,22 @@ CREATE TABLE transactions (tid INT PRIMARY KEY,account_num INT, transaction_type
 
 ## STEP 5: Insert Values in Transactions Table
 ```sql
-INSERT INTO transactions (tid, account_num, transaction_type, amount, transaction_date) VALUES (1, 1001, 'Deposit', 10000, '2025-11-01'),(2, 1002, 'Withdrawal', 5000, '2025-11-03'),(3, 1003, 'Deposit', 7000, '2025-11-05'),(4, 1004, 'Withdrawal', 6000, '2025-11-08'),(5, 1005, 'Deposit', 15000, '2025-11-10'),(6, 1006, 'Deposit', 20000, '2025-11-13'),(7, 1007, 'Withdrawal', 2500, '2025-10-28'),(8, 1008, 'Deposit', 5000, '2025-10-21'),(9, 1009, 'Deposit', 3000, '2025-09-10'),(10, 1010, 'Deposit', 25000, '2025-11-15'),(11, 1001, 'Withdrawal', 4500, '2025-11-17'),(12, 1005, 'Withdrawal', 12000, '2025-11-19'),(13, 1006, 'Deposit', 15000, '2025-11-20'),(14, 1008, 'Withdrawal', 5000, '2025-11-21'),(15, 1003, 'Withdrawal', 6500, '2025-11-22');
+INSERT INTO transactions (tid, account_num, transaction_type, amount, transaction_date) VALUES
+(1, 1001, 'Deposit', 10000, '2025-11-01'),
+(2, 1002, 'Withdrawal', 5000, '2025-11-03'),
+(3, 1003, 'Deposit', 7000, '2025-11-05'),
+(4, 1004, 'Withdrawal', 6000, '2025-11-08'),
+(5, 1005, 'Deposit', 15000, '2025-11-10'),
+(6, 1006, 'Deposit', 20000, '2025-11-13'),
+(7, 1007, 'Withdrawal', 2500, '2025-10-28'),
+(8, 1008, 'Deposit', 5000, '2025-10-21'),
+(9, 1009, 'Deposit', 3000, '2025-09-10'),
+(10, 1010, 'Deposit', 25000, '2025-11-15'),
+(11, 1001, 'Withdrawal', 4500, '2025-11-17'),
+(12, 1005, 'Withdrawal', 12000, '2025-11-19'),
+(13, 1006, 'Deposit', 15000, '2025-11-20'),
+(14, 1008, 'Withdrawal', 5000, '2025-11-21'),
+(15, 1003, 'Withdrawal', 6500, '2025-11-22');
 ```
 
 ## STEP 6: Retrieve Table Accounts
