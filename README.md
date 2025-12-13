@@ -9,7 +9,7 @@ This project helps students and beginners understand how real-world banking syst
 
 ### **3} Key Objectives:**
 
-3.1} Customer Account Management
+3.1} Customer Account Management.
 Store and manage customer account details efficiently.
 
 3.2} Transaction Handling
