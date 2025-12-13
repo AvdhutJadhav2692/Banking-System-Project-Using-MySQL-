@@ -11,27 +11,38 @@ This project helps students and beginners understand how real-world banking syst
 
 3.1} Customer Account Management
 Store and manage customer account details efficiently.
+
 3.2} Transaction Handling
 Record deposits and withdrawals accurately for each account.
+
 3.3} Data Integrity and Consistency
 Maintain correct and reliable data using primary keys, foreign keys, and constraints.
+
 3.4} Account Summary and Query Support
 Enable easy retrieval of account details, transaction history, and summaries using SQL queries.
 
 **4} Advantages:**
 
 4.1} Efficient management of customer accounts and transactions
+
 4.2} Accurate tracking of deposits and withdrawals
+
 4.3} Maintains data consistency and integrity
+
 4.4} Supports reporting and basic financial analysis
+
 4.5} Scalable for adding more customers and transactions
+
 4.6} Helps in understanding SQL queries and database design concepts
 
 **5} Disadvantages:**
 
 5.1} Works mainly through MySQL CLI or MySQL Workbench (no user interface)
+
 5.2} Not suitable for large-scale or real-time banking systems
+
 5.3} Lacks advanced security features like authentication and encryption
+
 5.4} Some operations require manual execution of SQL scripts
 
 **6} Working Flow:**
