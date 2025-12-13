@@ -1,11 +1,14 @@
 1} Banking System Project Using MySQL:
+
 A simple MySQL-based banking system that manages accounts, deposits, withdrawals, and transaction history. Built without triggers, it updates balances manually to help beginners understand core SQL operations and how basic banking processes work behind the scenes.
 
 2} Purpose of the Project:
+
 The purpose of this project is to design a simple and well-structured database system that can handle the basic operations of a banking environment. It focuses on managing customer accounts and financial transactions in an organized and reliable way using MySQL.
 This project helps students and beginners understand how real-world banking systems store, manage, and retrieve data. It demonstrates important database concepts such as relational table design, data integrity, constraints, and query-based reporting, making it a strong foundation for learning SQL and database development.
 
 3} Key Objectives:
+
 3.1} Customer Account Management
 Store and manage customer account details efficiently.
 3.2} Transaction Handling
@@ -16,6 +19,7 @@ Maintain correct and reliable data using primary keys, foreign keys, and constra
 Enable easy retrieval of account details, transaction history, and summaries using SQL queries.
 
 4} Advantages:
+
 4.1} Efficient management of customer accounts and transactions
 4.2} Accurate tracking of deposits and withdrawals
 4.3} Maintains data consistency and integrity
@@ -24,12 +28,14 @@ Enable easy retrieval of account details, transaction history, and summaries usi
 4.6} Helps in understanding SQL queries and database design concepts
 
 5} Disadvantages:
+
 5.1} Works mainly through MySQL CLI or MySQL Workbench (no user interface)
 5.2} Not suitable for large-scale or real-time banking systems
 5.3} Lacks advanced security features like authentication and encryption
 5.4} Some operations require manual execution of SQL scripts
 
 6} Working Flow:
+
 6.1} Database Initialization
 Create the banking database and required tables (Accounts and Transactions).
 Apply constraints such as primary keys, foreign keys, and NOT NULL to ensure data accuracy.
