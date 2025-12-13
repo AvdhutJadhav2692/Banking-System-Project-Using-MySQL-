@@ -85,7 +85,8 @@ CREATE TABLE accounts (account_num INT PRIMARY KEY, cust_name VARCHAR(50), gende
 
 ## STEP 3: Insert Values in Accounts Table
 ```sql
-INSERT INTO accounts (account_num, cust_name, gender, account_type, current_balance) VALUES (1001, 'Priya Patel', 'F', 'Savings', 75000.00),(1002, 'Amit Sharma', 'M', 'Current', 30000.00),(1003, 'Rohan Deshpande', 'M', 'Savings', 12000.00),(1004, 'Sneha Joshi', 'F', 'Savings', 52000.00),(1005, 'Vikas Singh', 'M', 'Current', 85000.00),(1006, 'Pooja Shetty', 'F', 'Savings', 60000.00),(1007, 'Nitin Verma', 'M', 'Current', 15000.00),(1008, 'Ananya Rao', 'F', 'Savings', 40000.00),(1009, 'Amit Sharma', 'M', 'Savings', 20000.00), (1010, 'Kavita Shah', 'F', 'Current', 90000.00);
+INSERT INTO accounts (account_num, cust_name, gender, account_type, current_balance) VALUES
+(1001, 'Priya Patel', 'F', 'Savings', 75000.00),(1002, 'Amit Sharma', 'M', 'Current', 30000.00),(1003, 'Rohan Deshpande', 'M', 'Savings', 12000.00),(1004, 'Sneha Joshi', 'F', 'Savings', 52000.00),(1005, 'Vikas Singh', 'M', 'Current', 85000.00),(1006, 'Pooja Shetty', 'F', 'Savings', 60000.00),(1007, 'Nitin Verma', 'M', 'Current', 15000.00),(1008, 'Ananya Rao', 'F', 'Savings', 40000.00),(1009, 'Amit Sharma', 'M', 'Savings', 20000.00), (1010, 'Kavita Shah', 'F', 'Current', 90000.00);
 ```
 
 ## STEP 4: Create Table Transactions
