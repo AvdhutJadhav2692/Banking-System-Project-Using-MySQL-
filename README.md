@@ -76,8 +76,112 @@ Perform regular database backups to prevent data loss.
 ```sql
 Create Database Bank;
 use Bank;
+```
 
-## STEP 1: Create and Use Database
+## STEP 2: Create Table Accounts
 ```sql
+CREATE TABLE accounts (account_num INT PRIMARY KEY, cust_name VARCHAR(50), gender CHAR(1),account_type VARCHAR(20),current_balance DECIMAL(10,2));
+```
+
+## STEP 3: Insert Values in Accounts Table
+```sql
+INSERT INTO accounts (account_num, cust_name, gender, account_type, current_balance) VALUES (1001, 'Priya Patel', 'F', 'Savings', 75000.00),(1002, 'Amit Sharma', 'M', 'Current', 30000.00),(1003, 'Rohan Deshpande', 'M', 'Savings', 12000.00),(1004, 'Sneha Joshi', 'F', 'Savings', 52000.00),(1005, 'Vikas Singh', 'M', 'Current', 85000.00),(1006, 'Pooja Shetty', 'F', 'Savings', 60000.00),(1007, 'Nitin Verma', 'M', 'Current', 15000.00),(1008, 'Ananya Rao', 'F', 'Savings', 40000.00),(1009, 'Amit Sharma', 'M', 'Savings', 20000.00), (1010, 'Kavita Shah', 'F', 'Current', 90000.00);
+```
+
+## STEP 4: Create Table Transactions
+```sql
+CREATE TABLE transactions (tid INT PRIMARY KEY,account_num INT, transaction_type VARCHAR(20),amount DECIMAL(10,2), transaction_date DATE, FOREIGN KEY (account_num) REFERENCES accounts(account_num));
+```
 
 
+## STEP 5: Insert Values in Transactions Table
+```sql
+INSERT INTO transactions (tid, account_num, transaction_type, amount, transaction_date) VALUES (1, 1001, 'Deposit', 10000, '2025-11-01'),(2, 1002, 'Withdrawal', 5000, '2025-11-03'),(3, 1003, 'Deposit', 7000, '2025-11-05'),(4, 1004, 'Withdrawal', 6000, '2025-11-08'),(5, 1005, 'Deposit', 15000, '2025-11-10'),(6, 1006, 'Deposit', 20000, '2025-11-13'),(7, 1007, 'Withdrawal', 2500, '2025-10-28'),(8, 1008, 'Deposit', 5000, '2025-10-21'),(9, 1009, 'Deposit', 3000, '2025-09-10'),(10, 1010, 'Deposit', 25000, '2025-11-15'),(11, 1001, 'Withdrawal', 4500, '2025-11-17'),(12, 1005, 'Withdrawal', 12000, '2025-11-19'),(13, 1006, 'Deposit', 15000, '2025-11-20'),(14, 1008, 'Withdrawal', 5000, '2025-11-21'),(15, 1003, 'Withdrawal', 6500, '2025-11-22');
+```
+
+## STEP 6: Retrieve Table Accounts
+```sql
+select * from accounts;
+```
+
+## STEP 7: Retrieve Table Transactions
+```sql
+select * from transactions;
+```
+
+**Queries**
+
+## 1. Retrieve all customer names who have a balance greater than 50,000.
+```sql
+mysql> select cust_name,current_balance from accounts where current_balance>50000;
+```
+
+## 2. Display account number, customer name, and account type of all customers having SAVINGS accounts.
+```sql
+mysql> select account_num,cust_name,account_type from accounts where account_type='Savings';
+```
+
+## 3. List all transactions made in the current month.
+```sql
+mysql> select * from transactions where month(transaction_date)=month(current_date);
+```
+
+## 4. Show customers who have not made any transactions yet.
+```sql
+mysql> select * from accounts where account_num not in (select account_num from transactions group by account_num);
+```
+
+## 5. Display the top 3 customers with the highest account balance.
+```sql
+mysql> select account_num,cust_name,current_balance from accounts order by current_balance desc limit 3;
+```
+
+## 6. Retrieve all transactions where the amount is greater than 10,000.
+```sql
+mysql> select * from transactions where amount>10000;
+```
+
+## 7. Show the total balance of all accounts combined.
+```sql
+mysql> select sum(current_balance) as total_balance from accounts;
+```
+
+## 8. List customers along with their total deposited amount.
+```sql
+mysql> select account_num,sum(amount) as Total_Deposit from transactions where transaction_type='Deposit' group by account_num ;
+```
+
+## 9. Find customers who made a withdrawal of more than 5,000.
+```sql
+mysql> select account_num,amount from transactions where transaction_type='Withdrawal' and amount>5000 ;
+```
+
+## 10. Display the most recent transaction date for each account.
+```sql
+mysql> select account_num,max(transaction_date) from transactions group by account_num;
+```
+
+## 11. Retrieve the number of transactions each customer has made.
+```sql
+mysql> select account_num,count(*) from transactions group by account_num;
+```
+
+## 12. List customers who have both SAVINGS and CURRENT accounts (if allowed).
+```sql
+mysql> select account_num,cust_name from accounts where account_type='Savings' and account_type='Current' group by account_num,cust_name;
+```
+
+## 13. Find all accounts created by customers whose name starts with 'P'.
+```sql
+mysql> select * from accounts where cust_name like'p%';
+```
+
+## 14. Retrieve customers sorted by their account balance in descending order.
+```sql
+mysql> select cust_name,current_balance from accounts order by current_balance desc ;
+```
+
+## 15. Display the average account balance per account type.
+```sql
+mysql> select account_type,round(avg(current_balance),2) as Avg_Balance from accounts group by account_type ;
+```
